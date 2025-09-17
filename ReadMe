@@ -1,20 +1,16 @@
 # Symmetric Non-negative Matrix Factorization (SymNMF) Project
 
 This repository contains the implementation of the **Symmetric Non-negative Matrix Factorization (SymNMF)** algorithm for clustering.  
-The project was developed as part of the course **Software Project (0368-2161)**.
+The project was developed as part of a course.
 
 SymNMF is applied to datasets and compared against KMeans using the silhouette score as a quality measure.  
 The implementation combines **C for performance** and a **Python interface** for usability.
 
 ---
-
 ## Quick Start
-
 Clone the repo and build:
-```bash
 make
 python3 setup.py build_ext --inplace
-```
 
 ## Project Structure
 - **symnmf.py** – Python interface for running SymNMF, similarity matrix, degree matrix, and normalized similarity matrix.  
@@ -36,14 +32,11 @@ python3 setup.py build_ext --inplace
 
 **Usage**
 Run from Python:
-```
 python3 symnmf.py k goal input_file.txt
-```
+
 k: number of clusters (< N)
 goal: one of symnmf, sym, ddg, norm
 input_file.txt: dataset with N points
 
 Run from C:
-```
 ./symnmf goal input_file.txt
-```
